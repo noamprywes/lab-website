@@ -1,0 +1,8 @@
+title: "Prywes Lab"
+description: "Synthetic biology and enzymology at [Your University Name]"
+url: "https://pryweslab.org"
+baseurl: ""
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
