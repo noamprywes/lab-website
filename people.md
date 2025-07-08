@@ -4,7 +4,7 @@ title: People
 permalink: /people/
 ---
 
-# People
+## People
 
-Noam Prywes
+# Noam Prywes
 noamprywes@gmail.com
