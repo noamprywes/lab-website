@@ -8,7 +8,7 @@ permalink: /about/
 .about-row {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center; /* Vertically center text and image */
   gap: 20px;
   margin-bottom: 40px;
 }
@@ -30,11 +30,13 @@ permalink: /about/
 @media (max-width: 768px) {
   .about-row {
     flex-direction: column;
+    align-items: stretch; /* Let each block take full width on mobile */
   }
 }
 </style>
 
 <h1>About the Lab</h1>
+<h2>Engineering Photosynthesis to Improve Carbon Fixation</h2>
 
 <div class="about-row">
   <div class="about-text">
@@ -43,7 +45,7 @@ permalink: /about/
     </p>
   </div>
   <div class="about-image">
-    <img src="/images/leaf.png" alt="Leaf illustration">
+    <img src="/images/9rub_rotate.gif" alt="Rotating Rubisco animation">
   </div>
 </div>
 
@@ -65,6 +67,6 @@ permalink: /about/
     </p>
   </div>
   <div class="about-image">
-    <img src="/images/9rub_rotate.gif" alt="Rotating Rubisco animation">
+    <img src="/images/leaf.png" alt="Leaf illustration">
   </div>
 </div>
