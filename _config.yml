@@ -1,8 +1,14 @@
 title: "Prywes Lab"
-description: "Synthetic biology and enzymology at Cambridge University"
+description: "Synthetic biology and enzymology"
 url: "https://pryweslab.org"
 baseurl: ""
 theme: minima
 markdown: kramdown
 plugins:
   - jekyll-feed
+header_pages:
+  - index.md
+  - about.md
+  - people.md
+  - publications.md
+  - join-us.md
