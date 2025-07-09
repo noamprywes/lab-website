@@ -8,4 +8,4 @@ permalink: /Join us/
 
 We are currently recruiting at all levels!
 
-Please contact noam.prywes@gmail.com
+Please contact noamprywes [at] gmail.com
