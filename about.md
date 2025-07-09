@@ -20,5 +20,6 @@ permalink: /research/
   </div>
   <div style="flex: 1;">
     <img src="/images/9rub_rotate.gif" alt="twirling rubisco" style="max-width:100%; height:auto;">
+    <img src="/images/landscapeGif.gif" alt="landscape" style="max-width:100%; height:auto;">
   </div>
 </div>
