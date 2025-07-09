@@ -4,9 +4,41 @@ title: Research
 permalink: /research/
 ---
 
-<div style="display: flex; align-items: flex-start;">
-  <div style="flex: 2; padding-right: 20px;">
-    <!-- Your text goes here -->
+<style>
+  .research-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .research-text {
+    flex: 1;
+    text-align: justify;
+  }
+
+  .research-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .research-images img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    .research-container {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<div class="research-container">
+  <div class="research-text">
     <h2>About the Lab</h2>
     <p>
       Plants, algae and cyanobacteria remove ~150 billion tonnes of carbon from the atmosphere every year. One enzyme, rubisco, is solely responsible for the carboxylation chemistry that ultimately feeds nearly all of the life on our planet. This enzyme has been extensively studied for decades but has proven very difficult to engineer.
@@ -18,8 +50,9 @@ permalink: /research/
       Photosynthetic engineering is an emerging discipline that has the potential to contribute to efforts to reduce carbon dioxide levels in our atmosphere. If rubisco could be improved it would have substantial implications for future efforts to draw down atmospheric carbon as fossil fuels are replaced by alternative energy sources.
     </p>
   </div>
-  <div style="flex: 1;">
-    <img src="/images/9rub_rotate.gif" alt="twirling rubisco" style="max-width:100%; height:auto;">
-    <img src="/images/landscapeGif.gif" alt="landscape" style="max-width:100%; height:auto;">
+  <div class="research-images">
+    <img src="/images/9rub_rotate.gif" alt="twirling rubisco">
+    <img src="/images/landscapeGif.gif" alt="landscape">
+    <img src="/images/leaf.png" alt="leaf">
   </div>
 </div>
