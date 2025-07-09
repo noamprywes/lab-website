@@ -23,9 +23,9 @@ permalink: /people/
 <div class="people-container">
   <div class="people-text">
     <h1>Noam Prywes</h1>
-    <p>noamprywes@gmail.com</p>
+    <p>noamprywes [at] gmail.com</p>
   </div>
   <div class="people-photo">
-    <img src="/images/Noam-Prywes-5.jpg" alt="noam" width="100">
+    <img src="/images/Noam-Prywes-5.jpg" alt="noam" width="100" style="border-radius: 10px;">
   </div>
 </div>
