@@ -6,7 +6,7 @@ permalink: /research/
 
 ## About the Lab
 
-<img src="/images/1.gif" alt="twirling rubisco" width="2000">
+<img src="/images/9rub_rotate.gif" alt="twirling rubisco" width="2000">
 
 Plants, algae and cyanobacteria remove ~150 billion tonnes of carbon from the atmosphere every year. One enzyme, rubisco, is solely responsible for the carboxylation chemistry that ultimately feeds nearly all of the life on our planet. This enzyme has been extensively studied for decades but has proven very difficult to engineer.
 
