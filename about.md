@@ -8,7 +8,7 @@ permalink: /about/
 .about-row {
   display: flex;
   flex-direction: row;
-  align-items: center; /* Vertically center text and image */
+  align-items: center;
   gap: 20px;
   margin-bottom: 40px;
 }
@@ -27,13 +27,18 @@ permalink: /about/
   height: auto;
 }
 
+.about-image img[alt="Landscape schematic"] {
+  border-radius: 10px;
+}
+
 @media (max-width: 768px) {
   .about-row {
     flex-direction: column;
-    align-items: stretch; /* Let each block take full width on mobile */
+    align-items: stretch;
   }
 }
 </style>
+
 
 <h1>About the Lab</h1>
 <h2>Engineering Photosynthesis to Improve Carbon Fixation</h2>
