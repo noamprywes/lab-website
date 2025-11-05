@@ -12,48 +12,58 @@
     <img 
       src="/images/deptLogo.jpg" 
       alt="Department of Biochemistry, University of Cambridge" 
-      class="logo-img">
+      class="logo-img dept-logo">
   </a>
   <img 
     src="/images/CambridgeLogo.jpg" 
     alt="University of Cambridge" 
-    class="logo-img">
+    class="logo-img cam-logo">
 </div>
 
 <style>
   .logo-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* center them horizontally on desktop */
     align-items: center;
     width: 80%;
     max-width: 600px;
     margin: 40px auto 0 auto;
-    gap: 16px;
+    gap: 24px; /* a bit more space between logos */
   }
 
   .logo-img {
-    width: 45%;
-    height: auto;
-    max-height: 60px;
+    height: 60px;
+    width: auto;
     object-fit: contain;
   }
 
+  /* Make the department logo a bit larger for balance */
+  .dept-logo {
+    height: 70px;
+  }
+
+  /* Mobile view */
   @media (max-width: 600px) {
     .logo-container {
       flex-direction: column;
-      align-items: center;
+      justify-content: center; /* center on mobile */
+      align-items: center;     /* change to flex-start for left-align */
+      gap: 12px;
     }
 
     .logo-img {
-      width: 60%;
-      max-height: 60px;
+      height: 60px;
+    }
+
+    .dept-logo {
+      height: 65px; /* slightly smaller on mobile */
     }
   }
 </style>
 
 <script>
   // Randomly pick one of the numbered photos
-  const totalPhotos = 27; // ← set this to however many you have
+  const totalPhotos = 27; // update to however many you have
   const randomIndex = Math.floor(Math.random() * totalPhotos) + 1;
   const imageFolder = "/images/mainPagePhotos/";
   const mainPhoto = document.getElementById("main-photo");
