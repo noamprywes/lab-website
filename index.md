@@ -1,10 +1,17 @@
 <a href="/about/">
-  <img 
-    id="main-photo"
-    src="/images/mainPagePhotos/mainPhoto1.jpg" 
-    alt="Main photo" 
-    style="width: 80%; max-width: 600px; height: auto; display: block; margin: 0 auto; border-radius: 8px; opacity: 0; transition: opacity 1s ease-in;">
+  <picture id="main-photo-container">
+    <source 
+      id="mobile-photo-src"
+      media="(max-width: 600px)" 
+      srcset="/images/mainPagePhotos/mobile/mainPhoto1.jpg">
+    <img 
+      id="main-photo"
+      src="/images/mainPagePhotos/mainPhoto1.jpg" 
+      alt="Main photo" 
+      style="width: 80%; max-width: 600px; height: auto; display: block; margin: 0 auto; border-radius: 8px; opacity: 0; transition: opacity 1s ease-in;">
+  </picture>
 </a>
+
 
 <!-- Department and University Logos -->
 <div class="logo-container">
@@ -62,17 +69,23 @@
 </style>
 
 <script>
-  // Randomly pick one of the numbered photos
-  const totalPhotos = 27; // update to however many you have
+  const totalPhotos = 27; // number of photos
   const randomIndex = Math.floor(Math.random() * totalPhotos) + 1;
   const imageFolder = "/images/mainPagePhotos/";
+  const mobileFolder = "/images/mainPagePhotos/mobile/";
+  
   const mainPhoto = document.getElementById("main-photo");
+  const mobileSource = document.getElementById("mobile-photo-src");
+
+  const chosenDesktop = `${imageFolder}mainPhoto${randomIndex}.jpg`;
+  const chosenMobile = `${mobileFolder}mainPhoto${randomIndex}.jpg`;
 
   const img = new Image();
-  img.src = `${imageFolder}mainPhoto${randomIndex}.jpg`;
-
+  img.src = chosenDesktop;
   img.onload = function() {
-    mainPhoto.src = img.src;
+    mainPhoto.src = chosenDesktop;
+    mobileSource.srcset = chosenMobile; // smaller image for mobile
     mainPhoto.style.opacity = 1;
   };
 </script>
+
