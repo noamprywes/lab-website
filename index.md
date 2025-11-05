@@ -10,7 +10,7 @@
         id="main-photo"
         src="/images/mainPagePhotos/mainPhoto1.jpg" 
         alt="Main photo" 
-        style="width: 80%; max-width: 600px; height: auto; border-radius: 8px; opacity: 0; transition: opacity 1s ease-in;">
+        style="width: 95%; max-width: 600px; height: auto; border-radius: 8px; opacity: 0; transition: opacity 1s ease-in;">
     </picture>
   </a>
 </div>
