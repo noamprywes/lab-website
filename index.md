@@ -1,17 +1,19 @@
-<a href="/about/">
-  <picture id="main-photo-container">
-    <source 
-      id="mobile-photo-src"
-      media="(max-width: 600px)" 
-      srcset="/images/mainPagePhotos/mobile/mainPhoto1.jpg">
-    <img 
-      id="main-photo"
-      src="/images/mainPagePhotos/mainPhoto1.jpg" 
-      alt="Main photo" 
-      style="width: 80%; max-width: 600px; height: auto; display: block; margin: 0 auto; border-radius: 8px; opacity: 0; transition: opacity 1s ease-in;">
-  </picture>
-</a>
-
+<!-- Clickable main photo -->
+<div style="text-align:center;">
+  <a href="/about/" id="main-photo-link" style="display: inline-block;">
+    <picture id="main-photo-container">
+      <source 
+        id="mobile-photo-src"
+        media="(max-width: 600px)" 
+        srcset="/images/mainPagePhotos/mobile/mainPhoto1.jpg">
+      <img 
+        id="main-photo"
+        src="/images/mainPagePhotos/mainPhoto1.jpg" 
+        alt="Main photo" 
+        style="width: 80%; max-width: 600px; height: auto; border-radius: 8px; opacity: 0; transition: opacity 1s ease-in;">
+    </picture>
+  </a>
+</div>
 
 <!-- Department and University Logos -->
 <div class="logo-container">
@@ -30,12 +32,12 @@
 <style>
   .logo-container {
     display: flex;
-    justify-content: center; /* center them horizontally on desktop */
+    justify-content: center;
     align-items: center;
     width: 80%;
     max-width: 600px;
-    margin: 40px auto 0 auto;
-    gap: 24px; /* a bit more space between logos */
+    margin: 40px auto 0;
+    gap: 24px;
   }
 
   .logo-img {
@@ -44,17 +46,15 @@
     object-fit: contain;
   }
 
-  /* Make the department logo a bit larger for balance */
   .dept-logo {
     height: 70px;
   }
 
-  /* Mobile view */
   @media (max-width: 600px) {
     .logo-container {
       flex-direction: column;
-      justify-content: center; /* center on mobile */
-      align-items: center;     /* change to flex-start for left-align */
+      justify-content: center; /* or flex-start for left-align */
+      align-items: center;
       gap: 12px;
     }
 
@@ -63,29 +63,29 @@
     }
 
     .dept-logo {
-      height: 65px; /* slightly smaller on mobile */
+      height: 65px;
     }
   }
 </style>
 
 <script>
-  const totalPhotos = 27; // number of photos
+  const totalPhotos = 27;
   const randomIndex = Math.floor(Math.random() * totalPhotos) + 1;
   const imageFolder = "/images/mainPagePhotos/";
   const mobileFolder = "/images/mainPagePhotos/mobile/";
-  
+
   const mainPhoto = document.getElementById("main-photo");
   const mobileSource = document.getElementById("mobile-photo-src");
 
   const chosenDesktop = `${imageFolder}mainPhoto${randomIndex}.jpg`;
   const chosenMobile = `${mobileFolder}mainPhoto${randomIndex}.jpg`;
 
+  // Load smaller image first for faster perceived load on mobile
   const img = new Image();
-  img.src = chosenDesktop;
-  img.onload = function() {
+  img.src = window.innerWidth <= 600 ? chosenMobile : chosenDesktop;
+  img.onload = () => {
     mainPhoto.src = chosenDesktop;
-    mobileSource.srcset = chosenMobile; // smaller image for mobile
+    mobileSource.srcset = chosenMobile;
     mainPhoto.style.opacity = 1;
   };
 </script>
-
