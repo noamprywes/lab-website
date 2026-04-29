@@ -71,7 +71,7 @@
 <script>
   const totalPhotos = 27;
   const randomIndex = Math.floor(Math.random() * totalPhotos) + 1;
-  const imageFolder = "/images/mainPagePhotos/";
+  const imageFolder = "/images/mainPagePhotos/mobile/";
   const mobileFolder = "/images/mainPagePhotos/mobile/";
 
   const mainPhoto = document.getElementById("main-photo");
