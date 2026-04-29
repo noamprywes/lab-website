@@ -50,7 +50,7 @@
     height: 70px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 1200px) {
     .logo-container {
       flex-direction: column;
       justify-content: center; /* or flex-start for left-align */
@@ -71,7 +71,7 @@
 <script>
   const totalPhotos = 27;
   const randomIndex = Math.floor(Math.random() * totalPhotos) + 1;
-  const imageFolder = "/images/mainPagePhotos/desktop/";
+  const imageFolder = "/images/mainPagePhotos/mobile/";
   const mobileFolder = "/images/mainPagePhotos/mobile/";
 
   const mainPhoto = document.getElementById("main-photo");
